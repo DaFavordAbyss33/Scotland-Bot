@@ -20,11 +20,11 @@ from discord import opus
 
 
 
-client = commands.Bot(command_prefix=("x"))
+client = commands.Bot(command_prefix=("S"))
 
 client.remove_command("help")
 
-status = ["Still Undergoing Development Bare With :)", "xhelp For Commands :)", "Any issues dm A.price#9746"]
+status = ["Still Undergoing Development Bare With :)", "Shelp For Commands :)", "Any issues dm A.price#9746"]
 
 
 
@@ -68,7 +68,7 @@ async def on_ready():
 
 async def on_message(message):
 
-  if message.content == 'xstop':
+  if message.content == 'Sstop':
 
       serverid = message.server.id
 
@@ -76,7 +76,7 @@ async def on_message(message):
 
       await client.send_message(message.channel, "Player stopped")
 
-  if message.content == 'xpause':
+  if message.content == 'Spause':
 
       serverid = message.server.id
 
@@ -84,7 +84,7 @@ async def on_message(message):
 
       await client.send_message(message.channel, "Player paused")
 
-  if message.content == 'xresume':
+  if message.content == 'Sresume':
 
       serverid = message.server.id
 
@@ -92,11 +92,11 @@ async def on_message(message):
 
       await client.send_message(message.channel, "Player resumed")
 
-  if message.content.startswith('xplay '):
+  if message.content.startswith('Splay '):
 
       author = message.author
 
-      name = message.content.replace("xplay ", '')                 
+      name = message.content.replace("Splay ", '')                 
 
       fullcontent = ('http://www.youtube.com/results?search_query=' + name)
 
@@ -220,15 +220,15 @@ async def help(ctx):
 
 	embed = discord.Embed(title="Help section", description=" ", color=0xFFFF)
 
-	embed.add_field(name="xjoin", value="make the bot join voice channel")
+	embed.add_field(name="Sjoin", value="make the bot join voice channel")
 
-	embed.add_field(name="xleave", value="make the bot leave the voice channel")
+	embed.add_field(name="Sleave", value="make the bot leave the voice channel")
 
-	embed.add_field(name="xplay", value="please be careful when using this command it will break if theres music playing.")
+	embed.add_field(name="Splay", value="please be careful when using this command it will break if theres music playing.")
 
-	embed.add_field(name="xstop", value="to stop the music from playing")
+	embed.add_field(name="Sstop", value="to stop the music from playing")
 
-	embed.add_field(name="xping", value="get bot's ping time")
+	embed.add_field(name="Sping", value="get bot's ping time")
 
 	await client.say(embed=embed)
 
